@@ -14,7 +14,8 @@ public class MainActivity extends AppCompatActivity {
     EditText etnama, ettelp;
     TextView tvhasil;
     CheckBox cbm, cbb, cbi, cbk;
-
+    RadioGroup rg;
+    Spinner sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         cbm = (CheckBox) findViewById(R.id.checkBoxm);
         cbi = (CheckBox) findViewById(R.id.checkBoxing);
         cbk = (CheckBox) findViewById(R.id.checkBoxk);
+        rg = (RadioGroup) findViewById(R.id.rgw);
+        sp = (Spinner) findViewById(R.id.spinner);
 
         findViewById(R.id.buttonh).setOnClickListener(new View.OnClickListener(){
 
@@ -48,6 +51,25 @@ public class MainActivity extends AppCompatActivity {
         if (cbk.isChecked()) program += "\t " + cbk.getText() + "\n";
         if (program.length() == startlen) {
             tvhasil.setText("Tidak ada Mata pelajaran yang dipilih\n");
+        }
+        else {
+            String hasil = null;
+            if (rg.getCheckedRadioButtonId() != -1) {
+                RadioButton rb = (RadioButton) findViewById(rg.getCheckedRadioButtonId());
+                hasil = rb.getText().toString();
+            }
+            if (hasil == null) {
+                tvhasil.setText("Anda belum memilih Waktu Les\n");
+            }
+            else {
+                StringBuilder builder = new StringBuilder();
+                builder.append("Nama : " + nama + "\n");
+                builder.append("Telp : " + telp + "\n");
+                builder.append(program);
+                builder.append("Waktu Les : " + hasil + "\n");
+                builder.append(sp.getSelectedItem().toString() + "\n");
+                tvhasil.setText(builder);
+            }
         }
 
     }

@@ -21,7 +21,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PENDAFTARAN LES"
+        android:text="             PENDAFTARAN LES"
         android:id="@+id/textView"
         style="@style/Base.TextAppearance.AppCompat.Headline"
         android:textColor="@android:color/holo_red_light"
@@ -37,5 +37,141 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:ems="10"
+        android:id="@+id/editTextnama"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="56dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="Telp"
+        android:ems="10"
+        android:id="@+id/editTexttelp"
+        android:layout_below="@+id/editTextnama"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:text="Mata Pelajaran"
+        android:layout_width="102dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTexttelp"
+        android:layout_alignLeft="@+id/checkBoxm"
+        android:layout_alignStart="@+id/checkBoxm"
+        android:id="@+id/textView4"/>
+
+    <CheckBox
+        android:text="MATEMATIKA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTexttelp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="22dp"
+        android:id="@+id/checkBoxm"/>
+    <CheckBox
+        android:text="B. INDONESIA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxm"
+        android:layout_alignLeft="@+id/checkBoxm"
+        android:layout_alignStart="@+id/checkBoxm"
+        android:id="@+id/checkBoxb"/>
+    <CheckBox
+        android:text="B. INGGRIS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBoxb"
+        android:layout_alignLeft="@+id/checkBoxb"
+        android:layout_alignStart="@+id/checkBoxb"
+        android:id="@+id/checkBoxing"/>
+    <CheckBox
+        android:text="KEJURUAN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBoxk"
+        android:layout_below="@+id/checkBoxing"
+        android:layout_alignLeft="@+id/checkBoxing"
+        android:layout_alignStart="@+id/checkBoxing" />
+    
+    <TextView
+        android:text="Pilih Waktu Les :"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/checkBoxk"
+        android:layout_alignRight="@+id/buttonh"
+        android:layout_alignEnd="@+id/buttonh"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rgw">
+
+        <RadioButton
+            android:text="Sore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton"
+            android:layout_below="@+id/textView5"
+            android:layout_alignRight="@+id/textView5"
+            android:layout_alignEnd="@+id/textView5"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:text="Malam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton2"
+            android:layout_below="@+id/radioButton"
+            android:layout_alignLeft="@+id/radioButton"
+            android:layout_alignStart="@+id/radioButton"
+            android:layout_weight="1"/>
+    </RadioGroup>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:entries="@array/bayar"
+        android:layout_marginTop="25dp"
+        android:id="@+id/spinner"/>
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonh"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:text="Hasil"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewh"
+        android:layout_alignBaseline="@+id/buttonh"
+        android:layout_alignBottom="@+id/buttonh"
+        android:layout_toRightOf="@+id/radioButton2"
+        android:layout_toEndOf="@+id/radioButton2"
+        android:layout_weight="0.54"/>
+
 </LinearLayout>
 </ScrollView>

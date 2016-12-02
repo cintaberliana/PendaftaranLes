@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bayar">
+        <item>Bayar Langsung</item>
+        <item>Bayar Kredit</item>
+    </string-array>
+</resources>
